@@ -17,6 +17,11 @@ app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", Router);
 
+
+app.get("/", (req, res) => {
+  res.send("Hello on Blog-App Backend");
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on PORT: ${PORT}`);
 });
