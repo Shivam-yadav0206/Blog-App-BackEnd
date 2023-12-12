@@ -12,17 +12,6 @@ app.use(express.json());
 connectDb();
 const PORT = process.env.PORT || 5000;
 
-const options = [
-  cors({
-    origin: "*",
-    methods: "*",
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-  }),
-];
-
-app.use(options);
-
 app.use(cors());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
